@@ -1,0 +1,34 @@
+theme = "zed_onedark"
+
+[editor]
+bufferline = "multiple" # Show currently open buffers, only when more than one exists.
+cursorline = true # Highlight all lines with a cursor
+line-number = "relative" # Use relative line numbers
+rulers = [120] # Show a ruler at column 120
+true-color = true # Force the theme to show colors
+
+[editor.statusline]
+left = ["mode", "spinner", "version-control", "file-name"]
+right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+separator = "│"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[editor.cursor-shape]
+insert = "bar"
+
+[editor.file-picker]
+hidden = false
+
+[editor.indent-guides]
+render = true
+character = "╎" # Some characters that work well: "▏", "┆", "┊", "⸽"
+skip-levels = 1
+
+[keys.normal]
+"A-," = "goto_previous_buffer"
+"A-." = "goto_next_buffer"
+"A-w" = ":buffer-close"
+"A-/" = "repeat_last_motion"
+
